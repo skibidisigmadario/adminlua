@@ -1,0 +1,9 @@
+getgenv().key = "Insert"
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "MangoCMD Open"
+tool.Activated:connect(function()
+    local vim = game:service("VirtualInputManager")
+vim:SendKeyEvent(true, keytoclick, false, game)
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
